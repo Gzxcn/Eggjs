@@ -1,6 +1,6 @@
 # blog
 
-A Project For Blog Api
+A EggJs Project For Practice
 
 ## QuickStart
 
