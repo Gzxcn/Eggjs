@@ -5,6 +5,9 @@
  */
 module.exports = app => {
 	const { router, controller } = app;
-	router.get("/admin/index",controller.admin.index)
-
+	const token = app.middleware.token({
+		"role" : 'admin'
+	});
+	router.get("/admin/index",token,controller.admin.index.index)
+	router.get("/admin/login", controller.admin.index.login)
 }
